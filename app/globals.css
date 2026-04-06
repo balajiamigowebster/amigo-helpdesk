@@ -1,0 +1,275 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Step 1: Font variables-ah define pannunga */
+  /* --font-electrolize: var(--font-electrolize);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono); */
+
+  /* Step 2: Default sans font-ah Electrolize-ku set pannunga */
+  /* Orey oru thadavai thaan --font-sans irukkanum */
+  --font-sans: var(--font-lexend), ui-sans-serif, system-ui;
+  --font-mono: var(--font-lexend), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* --- CUSTOM SMALL SCROLLBAR --- */
+
+/* --- GLOBAL.CSS --- */
+
+/* Base layer-la override panna try pannalam */
+@layer base {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px !important; /* Vertical width */
+    height: 3px !important; /* Horizontal height (Table scroll-kku ithu thaan mukkiyam) */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1 !important; /* slate-300 */
+    border-radius: 10px !important; /* Radius eppovum konjam irunthaal thaan rounded look kidaikkum */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8 !important; /* slate-400 */
+  }
+
+  /* Firefox-kku width control panna mudiyathu, 'thin' mattum thaan kudukka mudiyum */
+  .custom-scrollbar {
+    scrollbar-width: thin !important;
+    scrollbar-color: #6a6c6e transparent !important;
+  }
+}
+
+/* --- HELPDESKTECH CUSTOM ANIMATIONS --- */
+
+@layer utilities {
+  /* Infinite Float Animation */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(3deg);
+    }
+  }
+
+  /* Progress Bar Glow */
+  @keyframes progressGlow {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Soft Pulse for Background Blobs */
+  @keyframes softPulse {
+    0%,
+    100% {
+      opacity: 0.2;
+      scale: 1;
+    }
+    50% {
+      opacity: 0.4;
+      scale: 1.1;
+    }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-progress-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animate-progress-glow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #2563eb, transparent);
+    animation: progressGlow 1.5s infinite linear;
+  }
+
+  .blob-pulse {
+    animation: softPulse 6s ease-in-out infinite;
+  }
+
+  /* Scrollbar-ah mothamaa maraikka */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none !important; /* IE and Edge */
+    scrollbar-width: none !important; /* Firefox */
+    overflow-y: auto;
+    overflow-x: hidden; /* Side scroll-ah thadukka */
+  }
+}
+
+/* --- NPROGRESS MANUAL CUSTOMIZATION --- */
+
+#nprogress .bar {
+  /* Direct Hex Color: #2563eb (Blue) */
+  background: #2563eb !important;
+  height: 3px !important; /* Konjam thickness kootti irukkaen */
+  z-index: 10000 !important;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5) !important;
+}
+
+#nprogress .peg {
+  /* Tail end glow effect */
+  box-shadow:
+    0 0 15px #081634,
+    0 0 8px #2563eb !important;
+  opacity: 1 !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: #2563eb !important;
+  border-left-color: #2563eb !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-width: 3px !important;
+}
+
+/* Dark mode-la mattum vera color (e.g. Cyan or White) venum na ithai use pannunga */
+.dark #nprogress .bar {
+  background: #012e41 !important; /* Sky Blue for dark mode visibility */
+}
+
+.dark #nprogress .peg {
+  box-shadow:
+    0 0 15px #38bdf8,
+    0 0 8px #38bdf8 !important;
+}
