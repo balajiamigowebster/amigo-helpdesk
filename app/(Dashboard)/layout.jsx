@@ -11,7 +11,7 @@ import api from "@/api";
 const Layout = ({ children }) => {
   // API Call function
   const fetchUser = async () => {
-    const { data } = await api.get("/mes");
+    const { data } = await api.get("/me");
     console.log(data);
     return data;
   };
